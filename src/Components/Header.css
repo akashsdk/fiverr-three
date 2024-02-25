@@ -45,6 +45,9 @@
     font-size: 18px;
     font-weight: 700;
 }
+.header-text.red{
+    color: rgb(1, 142, 95);
+}
 
 
 
