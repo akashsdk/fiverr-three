@@ -66,16 +66,36 @@ const HeaderCart = ({ textColors, handleTextClick }) => (
         <p className={`header-text ${textColors[0]}`}>Home</p>
       </Link>
 
-      <Link to="/charges" className="header-Link" onClick={() => handleTextClick(1)}>
+      <Link
+        to="/charges"
+        className="header-Link"
+        onClick={() => handleTextClick(1)}
+      >
         <p className={`header-text ${textColors[1]}`}>Charges</p>
       </Link>
 
-      <Link to="/services-customer" className="header-Link" onClick={() => handleTextClick(2)}>
+      <Link
+        to="/services-customer"
+        className="header-Link"
+        onClick={() => handleTextClick(2)}
+      >
         <p className={`header-text ${textColors[2]}`}>Services</p>
       </Link>
 
-      <Link to="/contact" className="header-Link" onClick={() => handleTextClick(3)}>
-        <p className={`header-text ${textColors[3]}`}>Contact</p>
+      <Link
+        to="/about us"
+        className="header-Link"
+        onClick={() => handleTextClick(3)}
+      >
+        <p className={`header-text ${textColors[3]}`}>About Us</p>
+      </Link>
+
+      <Link
+        to="/contact"
+        className="header-Link"
+        onClick={() => handleTextClick(4)}
+      >
+        <p className={`header-text ${textColors[4]}`}>Contact</p>
       </Link>
     </div>
 

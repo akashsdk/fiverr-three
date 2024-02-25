@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import Charges from './Screen/Charges';
 import ServicesCustomer from './Screen/ServicesCustomer';
 import ServicesMerchant from './Screen/ServicesMerchant';
+import AboutUs from './Screen/AboutUs';
 import Contact from './Screen/Contact';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/charges" element={<Charges />} />
           <Route path="/services-customer" element={<ServicesCustomer />} />
           <Route path="/services-merchant" element={<ServicesMerchant />} />
+          <Route path="/about us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer/>
