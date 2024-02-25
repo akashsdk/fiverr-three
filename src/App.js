@@ -4,6 +4,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Screen/Home";
 import Headers from './Components/Header';
 import Footer from './Components/Footer';
+import Charges from './Screen/Charges';
+import ServicesCustomer from './Screen/ServicesCustomer';
+import ServicesMerchant from './Screen/ServicesMerchant';
 
 function App() {
   return (

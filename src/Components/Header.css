@@ -1,0 +1,48 @@
+.header-Body{
+    height: 80px;
+    width: 100%;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.header-fixed{
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    
+}
+.header-Box1{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-Box2{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-Box3{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
