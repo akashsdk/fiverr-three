@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,36 +18,48 @@ export default function Header() {
 
   return (
     <div style={{ height: "auto", width: "100%" }}>
-      <HeaderCart onScroll={handleScroll}/>
+      <HeaderCart onScroll={handleScroll} />
 
       {scrollPosition > 120 && (
-        <div className="header-fixed" >
-         <HeaderCart/>
+        <div className="header-fixed">
+          <HeaderCart />
         </div>
       )}
     </div>
   );
 }
 
-
 const HeaderCart = () => (
   <div className="header-Body">
     {/* Box1 */}
     <div className="header-Box1">
-      <button>Icon & Name</button>
+      <Link to="/">
+        <button>Icon & Name</button>
+      </Link>
     </div>
 
     {/* Box2 */}
     <div className="header-Box2">
-      <button>Home</button>
-      <button>Charges</button>
-      <button>Services</button>
-      <button>Contact</button>
+      <Link to="/"  className="header-Link">
+        <p className="header-text">Home</p>
+      </Link>
+
+      <Link to="/charges"  className="header-Link">
+        <p className="header-text">Charges</p>
+      </Link>
+
+      <Link to="/services-customer"  className="header-Link">
+        <p className="header-text">Services</p>
+      </Link>
+
+      <Link to="/contact"  className="header-Link">
+        <p className="header-text">Contact</p>
+      </Link>
     </div>
 
     {/* Box3 */}
     <div className="header-Box3">
-      <p>English or Bangla</p>
+      <p >English or Bangla</p>
     </div>
   </div>
 );
