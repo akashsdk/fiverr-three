@@ -12,7 +12,7 @@ import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
 
 import { Input, Button } from "antd";
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import { ShoppingCartOutlined } from "@ant-design/icons";
 const { Search } = Input;
 
 export default function Home() {
@@ -32,6 +32,8 @@ export default function Home() {
     setActiveIndex(index);
   };
   const onSearch = (value, _e, info) => console.log(info?.source, value);
+
+  // Box-2
   return (
     <div className="home-body">
       {/* Box-1 */}
@@ -76,12 +78,14 @@ export default function Home() {
           </div>
 
           <div className="homeBox1-right-div4">
-          <Button type="primary" icon={<ShoppingCartOutlined />} size='large'>
-            Register Now
-          </Button>
+            <Button type="primary" icon={<ShoppingCartOutlined />} size="large">
+              Register Now
+            </Button>
           </div>
         </div>
       </div>
+      {/* Box-2 */}
+      <div style={{ height: "1000px" }}></div>
     </div>
   );
 }
