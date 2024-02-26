@@ -1,0 +1,62 @@
+.home-body{
+    height: auto;
+    width: 100%;
+}
+.homeBox1{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeBox1-left{
+    width: 60%;
+}
+.homeBox1-left-img{
+    height: 550px;
+    width: 100%;
+}
+.homeBox1-right{
+    width: 40%;
+}
+.homeBox1-left-Div{
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.homeBox1-left-button{
+    height: 10px;
+    width: 30px;
+    background-color: rgb(216, 251, 251);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.homeBox1-left-button:hover{
+    
+    background-color: aqua;
+    
+}
+.homeBox1-left-button.active {
+    background-color: aqua;
+  }
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    .homeBox1{
+        flex-direction: column;
+    }
+}
