@@ -13,6 +13,21 @@ import Icon1 from "../Icon/online-shopping.png";
 import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
 import Icon4 from "../Icon/gps.png";
+import Icon5 from '../Icon/icon2.png';
+import Icon6 from '../Icon/icon3.png';
+import Icon7 from '../Icon/icon4.png';
+import Icon8 from '../Icon/icon5.png';
+import Icon9 from '../Icon/icon6.png';
+import Icon10 from '../Icon/icon7.png';
+import Icon11 from '../Icon/icon8.png';
+import Icon12 from '../Icon/icon9.png';
+import Icon13 from '../Icon/icon10.png';
+import Icon14 from '../Icon/icon11.png';
+import Icon15 from '../Icon/icon12.png';
+import Icon16 from '../Icon/icon13.png';
+import Icon17 from '../Icon/icon14.png';
+import Icon18 from '../Icon/icon15.png';
+import Icon19 from '../Icon/icon16.png';
 
 import { Input, Button } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
@@ -108,30 +123,30 @@ export default function Home() {
       <div className="homeBox2">
         <div className="homeBox2-div">
         <HomeBox2 icon={Icon4} text1='Realtime Tracking' text2='International standard tracking via online'/>
-        <HomeBox2 icon={''} text1='Dedicated Relationship Team' text2='Team that takes care of your orders, day in day out'/>
-        <HomeBox2 icon={''} text1='Return OTP' text2='Full control of returns through return OTP'/>
-        <HomeBox2 icon={''} text1='Free In App Call' text2='Reach out to us for any queries for free with {name} GO App'/>
+        <HomeBox2 icon={Icon5} text1='Dedicated Relationship Team' text2='Team that takes care of your orders, day in day out'/>
+        <HomeBox2 icon={Icon6} text1='Return OTP' text2='Full control of returns through return OTP'/>
+        <HomeBox2 icon={Icon7} text1='Free In App Call' text2='Reach out to us for any queries for free with {name} GO App'/>
         </div>
         
         <div className="homeBox2-div">
-        <HomeBox2 icon={''} text1='Cashless Pay' text2='Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery'/>
-        <HomeBox2 icon={''} text1='Smart log' text2='Detail visibility on return orders & correspondence between {name} and customers'/>
-        <HomeBox2 icon={''} text1='Automated billing' text2='Hassle free automated billing system'/>
-        <HomeBox2 icon={''} text1='Smart Check' text2='Access to customers’ previous delivery records to determine possible delivery or return'/>
+        <HomeBox2 icon={Icon8} text1='Cashless Pay' text2='Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery'/>
+        <HomeBox2 icon={Icon9} text1='Smart log' text2='Detail visibility on return orders & correspondence between {name} and customers'/>
+        <HomeBox2 icon={Icon10} text1='Automated billing' text2='Hassle free automated billing system'/>
+        <HomeBox2 icon={Icon11} text1='Smart Check' text2='Access to customers’ previous delivery records to determine possible delivery or return'/>
         </div>
 
         <div className="homeBox2-div">
-         <HomeBox2 icon={''} text1='Strongest Doorstep Delivery' text2='Reaching out to the doorsteps of 4554 unions of Bangladesh'/>
-         <HomeBox2 icon={''} text1='Cash on Delivery Service' text2='Payment collection after successful delivery'/>
-         <HomeBox2 icon={''} text1='Merchant Payment within 1 Day' text2='Guaranteed merchant payment within 24 hours of the delivery'/>
-         <HomeBox2 icon={''} text1='Nationwide Doorstep Pick-up' text2='Doorstep pickup from anywhere around the country'/>
+         <HomeBox2 icon={Icon12} text1='Strongest Doorstep Delivery' text2='Reaching out to the doorsteps of 4554 unions of Bangladesh'/>
+         <HomeBox2 icon={Icon13} text1='Cash on Delivery Service' text2='Payment collection after successful delivery'/>
+         <HomeBox2 icon={Icon14} text1='Merchant Payment within 1 Day' text2='Guaranteed merchant payment within 24 hours of the delivery'/>
+         <HomeBox2 icon={Icon15} text1='Nationwide Doorstep Pick-up' text2='Doorstep pickup from anywhere around the country'/>
         </div>
 
         <div className="homeBox2-div">
-         <HomeBox2 icon={''} text1='Fastest Doorstep Delivery' text2='Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh'/>
-         <HomeBox2 icon={''} text1='Dedicated Call Center' text2='A team of well trained professionals to listen and solve your queries'/>
-         <HomeBox2 icon={''} text1='Fulfillment and Warehousing' text2='Spacious warehousing and convenient fulfillment facilities'/>
-         <HomeBox2 icon={''} text1='Completely Own Setup' text2='a fleet of own vehicles and people'/>
+         <HomeBox2 icon={Icon16} text1='Fastest Doorstep Delivery' text2='Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh'/>
+         <HomeBox2 icon={Icon17} text1='Dedicated Call Center' text2='A team of well trained professionals to listen and solve your queries'/>
+         <HomeBox2 icon={Icon18} text1='Fulfillment and Warehousing' text2='Spacious warehousing and convenient fulfillment facilities'/>
+         <HomeBox2 icon={Icon19} text1='Completely Own Setup' text2='a fleet of own vehicles and people'/>
         </div>
       </div>
 
