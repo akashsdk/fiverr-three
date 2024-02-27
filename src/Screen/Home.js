@@ -13,24 +13,28 @@ import Icon1 from "../Icon/online-shopping.png";
 import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
 import Icon4 from "../Icon/gps.png";
-import Icon5 from '../Icon/icon2.png';
-import Icon6 from '../Icon/icon3.png';
-import Icon7 from '../Icon/icon4.png';
-import Icon8 from '../Icon/icon5.png';
-import Icon9 from '../Icon/icon6.png';
-import Icon10 from '../Icon/icon7.png';
-import Icon11 from '../Icon/icon8.png';
-import Icon12 from '../Icon/icon9.png';
-import Icon13 from '../Icon/icon10.png';
-import Icon14 from '../Icon/icon11.png';
-import Icon15 from '../Icon/icon12.png';
-import Icon16 from '../Icon/icon13.png';
-import Icon17 from '../Icon/icon14.png';
-import Icon18 from '../Icon/icon15.png';
-import Icon19 from '../Icon/icon16.png';
+import Icon5 from "../Icon/icon2.png";
+import Icon6 from "../Icon/icon3.png";
+import Icon7 from "../Icon/icon4.png";
+import Icon8 from "../Icon/icon5.png";
+import Icon9 from "../Icon/icon6.png";
+import Icon10 from "../Icon/icon7.png";
+import Icon11 from "../Icon/icon8.png";
+import Icon12 from "../Icon/icon9.png";
+import Icon13 from "../Icon/icon10.png";
+import Icon14 from "../Icon/icon11.png";
+import Icon15 from "../Icon/icon12.png";
+import Icon16 from "../Icon/icon13.png";
+import Icon17 from "../Icon/icon14.png";
+import Icon18 from "../Icon/icon15.png";
+import Icon19 from "../Icon/icon16.png";
 
 import { Input, Button } from "antd";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import {
+  ShoppingCartOutlined,
+  LeftCircleOutlined,
+  RightCircleOutlined,
+} from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 const { Search } = Input;
 
@@ -130,47 +134,168 @@ export default function Home() {
       </div>
       {/* Box-2 */}
       <div className="homeBox2">
-        <div className="homeBox2-div">
-          {(page === 0 ? [
-            { icon: Icon4, text1: "Realtime Tracking", text2: "International standard tracking via online" },
-            { icon: Icon5, text1: "Dedicated Relationship Team", text2: "Team that takes care of your orders, day in day out" },
-            { icon: Icon6, text1: "Return OTP", text2: "Full control of returns through return OTP" },
-            { icon: Icon7, text1: "Free In App Call", text2: "Reach out to us for any queries for free with {name} GO App" }
-          ] : [
-            { icon: Icon12, text1: "Strongest Doorstep Delivery", text2: "Reaching out to the doorsteps of 4554 unions of Bangladesh" },
-            { icon: Icon13, text1: "Cash on Delivery Service", text2: "Payment collection after successful delivery" },
-            { icon: Icon14, text1: "Merchant Payment within 1 Day", text2: "Guaranteed merchant payment within 24 hours of the delivery" },
-            { icon: Icon15, text1: "Nationwide Doorstep Pick-up", text2: "Doorstep pickup from anywhere around the country" }
-          ]).map((item, index) => (
-            <HomeBox2 key={index} icon={item.icon} text1={item.text1} text2={item.text2} />
-          ))}
+        <p className="home-Text">Why Name</p>
+        <div style={{ display: "flex", alignItems: "center", marginBottom:'30px' }}>
+          <div
+            style={{
+              flex: 1,
+              backgroundColor: "rgb(216, 251, 251)",
+              height: "3px",
+            }}
+          />
+
+          <p style={{ margin: "0 10px" }}>...</p>
+
+          <div
+            style={{
+              flex: 1,
+              backgroundColor: "rgb(216, 251, 251)",
+              height: "3px",
+            }}
+          />
         </div>
 
         <div className="homeBox2-div">
-          {(page === 1 ? [
-            { icon: Icon8, text1: "Cashless Pay", text2: "Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery" },
-            { icon: Icon9, text1: "Smart log", text2: "Detail visibility on return orders & correspondence between {name} and customers" },
-            { icon: Icon10, text1: "Automated billing", text2: "Hassle free automated billing system" },
-            { icon: Icon11, text1: "Smart Check", text2: "Access to customers’ previous delivery records to determine possible delivery or return" }
-          ] : [
-            { icon: Icon16, text1: "Fastest Doorstep Delivery", text2: "Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh" },
-            { icon: Icon17, text1: "Dedicated Call Center", text2: "A team of well trained professionals to listen and solve your queries" },
-            { icon: Icon18, text1: "Fulfillment and Warehousing", text2: "Spacious warehousing and convenient fulfillment facilities" },
-            { icon: Icon19, text1: "Completely Own Setup", text2: "a fleet of own vehicles and people" }
-          ]).map((item, index) => (
-            <HomeBox2 key={index} icon={item.icon} text1={item.text1} text2={item.text2} />
+          {(page === 0
+            ? [
+                {
+                  icon: Icon4,
+                  text1: "Realtime Tracking",
+                  text2: "International standard tracking via online",
+                },
+                {
+                  icon: Icon5,
+                  text1: "Dedicated Relationship Team",
+                  text2: "Team that takes care of your orders, day in day out",
+                },
+                {
+                  icon: Icon6,
+                  text1: "Return OTP",
+                  text2: "Full control of returns through return OTP",
+                },
+                {
+                  icon: Icon7,
+                  text1: "Free In App Call",
+                  text2:
+                    "Reach out to us for any queries for free with {name} GO App",
+                },
+              ]
+            : [
+                {
+                  icon: Icon12,
+                  text1: "Strongest Doorstep Delivery",
+                  text2:
+                    "Reaching out to the doorsteps of 4554 unions of Bangladesh",
+                },
+                {
+                  icon: Icon13,
+                  text1: "Cash on Delivery Service",
+                  text2: "Payment collection after successful delivery",
+                },
+                {
+                  icon: Icon14,
+                  text1: "Merchant Payment within 1 Day",
+                  text2:
+                    "Guaranteed merchant payment within 24 hours of the delivery",
+                },
+                {
+                  icon: Icon15,
+                  text1: "Nationwide Doorstep Pick-up",
+                  text2: "Doorstep pickup from anywhere around the country",
+                },
+              ]
+          ).map((item, index) => (
+            <HomeBox2
+              key={index}
+              icon={item.icon}
+              text1={item.text1}
+              text2={item.text2}
+            />
+          ))}
+        </div>
+
+        <div className="homeBox2-button-div">
+          <button
+            className="homeBox2-button"
+            onClick={() => {
+              setPage((prevPage) => (prevPage === 0 ? 1 : 0));
+            }}
+          >
+            <LeftCircleOutlined className="homeBox2-button-Icon" />
+          </button>
+
+          <button
+            className="homeBox2-button"
+            onClick={() => {
+              setPage((prevPage) => (prevPage === 0 ? 1 : 0));
+            }}
+          >
+            <RightCircleOutlined className="homeBox2-button-Icon" />
+          </button>
+        </div>
+
+        <div className="homeBox2-div">
+          {(page === 0
+            ? [
+                {
+                  icon: Icon8,
+                  text1: "Cashless Pay",
+                  text2:
+                    "Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery",
+                },
+                {
+                  icon: Icon9,
+                  text1: "Smart log",
+                  text2:
+                    "Detail visibility on return orders & correspondence between {name} and customers",
+                },
+                {
+                  icon: Icon10,
+                  text1: "Automated billing",
+                  text2: "Hassle free automated billing system",
+                },
+                {
+                  icon: Icon11,
+                  text1: "Smart Check",
+                  text2:
+                    "Access to customers’ previous delivery records to determine possible delivery or return",
+                },
+              ]
+            : [
+                {
+                  icon: Icon16,
+                  text1: "Fastest Doorstep Delivery",
+                  text2:
+                    "Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh",
+                },
+                {
+                  icon: Icon17,
+                  text1: "Dedicated Call Center",
+                  text2:
+                    "A team of well trained professionals to listen and solve your queries",
+                },
+                {
+                  icon: Icon18,
+                  text1: "Fulfillment and Warehousing",
+                  text2:
+                    "Spacious warehousing and convenient fulfillment facilities",
+                },
+                {
+                  icon: Icon19,
+                  text1: "Completely Own Setup",
+                  text2: "a fleet of own vehicles and people",
+                },
+              ]
+          ).map((item, index) => (
+            <HomeBox2
+              key={index}
+              icon={item.icon}
+              text1={item.text1}
+              text2={item.text2}
+            />
           ))}
         </div>
       </div>
-
-      <button
-        className="change-page-button"
-        onClick={() => {
-          setPage((prevPage) => (prevPage === 0 ? 1 : 0));
-        }}
-      >
-        Change Page
-      </button>
 
       <div style={{ height: "1000px" }}></div>
     </div>

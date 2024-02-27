@@ -2,6 +2,12 @@
   height: auto;
   width: 100%;
 }
+.home-Text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin: 0 10px;
+}
 .homeBox1 {
   height: auto;
   width: 100%;
@@ -87,25 +93,42 @@
   margin-bottom: 50px;
 }
 /* Box-2 */
-.homeBox2{
-    height: auto;
-    width: 100%;
-    margin-top: 100px;
-    
+.homeBox2 {
+  height: auto;
+  width: 100%;
+  margin-top: 100px;
 }
-.homeBox2-div{
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.homeBox2-div {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-/* next */
-
-
-
-
-
+.homeBox2-button-div {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.homeBox2-button {
+  height: 52px;
+  width: 52px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.homeBox2-button-Icon {
+  font-size: 50px;
+  opacity: 0.6;
+}
+.homeBox2-button-Icon:hover {
+  opacity: 1;
+}
+/* Box-3 */
 
 @media only screen and (max-width: 1000px) {
   .homeBox1 {
@@ -123,13 +146,19 @@
     margin-top: 50px;
     margin-left: 0%;
   }
-  .homeBox2-div{
+  .homeBox2 {
+    margin-top: 30px;
+  }
+  .homeBox2-div {
     justify-content: center;
     flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .home-Text {
+    font-size: 18px;
+  }
   .homeBox1-left {
     width: 100%;
   }
