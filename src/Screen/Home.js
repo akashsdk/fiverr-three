@@ -63,6 +63,15 @@ export default function Home() {
   };
 
   // Box-2
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setPage((prevPage) => (prevPage === 0 ? 1 : 0));
+    }, 10000); // Change page after 10 seconds
+
+    return () => clearTimeout(timeout);
+  }, [page]);
   return (
     <div className="home-body">
       {/* Box-1 */}
@@ -122,33 +131,46 @@ export default function Home() {
       {/* Box-2 */}
       <div className="homeBox2">
         <div className="homeBox2-div">
-        <HomeBox2 icon={Icon4} text1='Realtime Tracking' text2='International standard tracking via online'/>
-        <HomeBox2 icon={Icon5} text1='Dedicated Relationship Team' text2='Team that takes care of your orders, day in day out'/>
-        <HomeBox2 icon={Icon6} text1='Return OTP' text2='Full control of returns through return OTP'/>
-        <HomeBox2 icon={Icon7} text1='Free In App Call' text2='Reach out to us for any queries for free with {name} GO App'/>
-        </div>
-        
-        <div className="homeBox2-div">
-        <HomeBox2 icon={Icon8} text1='Cashless Pay' text2='Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery'/>
-        <HomeBox2 icon={Icon9} text1='Smart log' text2='Detail visibility on return orders & correspondence between {name} and customers'/>
-        <HomeBox2 icon={Icon10} text1='Automated billing' text2='Hassle free automated billing system'/>
-        <HomeBox2 icon={Icon11} text1='Smart Check' text2='Access to customers’ previous delivery records to determine possible delivery or return'/>
-        </div>
-
-        <div className="homeBox2-div">
-         <HomeBox2 icon={Icon12} text1='Strongest Doorstep Delivery' text2='Reaching out to the doorsteps of 4554 unions of Bangladesh'/>
-         <HomeBox2 icon={Icon13} text1='Cash on Delivery Service' text2='Payment collection after successful delivery'/>
-         <HomeBox2 icon={Icon14} text1='Merchant Payment within 1 Day' text2='Guaranteed merchant payment within 24 hours of the delivery'/>
-         <HomeBox2 icon={Icon15} text1='Nationwide Doorstep Pick-up' text2='Doorstep pickup from anywhere around the country'/>
+          {(page === 0 ? [
+            { icon: Icon4, text1: "Realtime Tracking", text2: "International standard tracking via online" },
+            { icon: Icon5, text1: "Dedicated Relationship Team", text2: "Team that takes care of your orders, day in day out" },
+            { icon: Icon6, text1: "Return OTP", text2: "Full control of returns through return OTP" },
+            { icon: Icon7, text1: "Free In App Call", text2: "Reach out to us for any queries for free with {name} GO App" }
+          ] : [
+            { icon: Icon12, text1: "Strongest Doorstep Delivery", text2: "Reaching out to the doorsteps of 4554 unions of Bangladesh" },
+            { icon: Icon13, text1: "Cash on Delivery Service", text2: "Payment collection after successful delivery" },
+            { icon: Icon14, text1: "Merchant Payment within 1 Day", text2: "Guaranteed merchant payment within 24 hours of the delivery" },
+            { icon: Icon15, text1: "Nationwide Doorstep Pick-up", text2: "Doorstep pickup from anywhere around the country" }
+          ]).map((item, index) => (
+            <HomeBox2 key={index} icon={item.icon} text1={item.text1} text2={item.text2} />
+          ))}
         </div>
 
         <div className="homeBox2-div">
-         <HomeBox2 icon={Icon16} text1='Fastest Doorstep Delivery' text2='Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh'/>
-         <HomeBox2 icon={Icon17} text1='Dedicated Call Center' text2='A team of well trained professionals to listen and solve your queries'/>
-         <HomeBox2 icon={Icon18} text1='Fulfillment and Warehousing' text2='Spacious warehousing and convenient fulfillment facilities'/>
-         <HomeBox2 icon={Icon19} text1='Completely Own Setup' text2='a fleet of own vehicles and people'/>
+          {(page === 1 ? [
+            { icon: Icon8, text1: "Cashless Pay", text2: "Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery" },
+            { icon: Icon9, text1: "Smart log", text2: "Detail visibility on return orders & correspondence between {name} and customers" },
+            { icon: Icon10, text1: "Automated billing", text2: "Hassle free automated billing system" },
+            { icon: Icon11, text1: "Smart Check", text2: "Access to customers’ previous delivery records to determine possible delivery or return" }
+          ] : [
+            { icon: Icon16, text1: "Fastest Doorstep Delivery", text2: "Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh" },
+            { icon: Icon17, text1: "Dedicated Call Center", text2: "A team of well trained professionals to listen and solve your queries" },
+            { icon: Icon18, text1: "Fulfillment and Warehousing", text2: "Spacious warehousing and convenient fulfillment facilities" },
+            { icon: Icon19, text1: "Completely Own Setup", text2: "a fleet of own vehicles and people" }
+          ]).map((item, index) => (
+            <HomeBox2 key={index} icon={item.icon} text1={item.text1} text2={item.text2} />
+          ))}
         </div>
       </div>
+
+      <button
+        className="change-page-button"
+        onClick={() => {
+          setPage((prevPage) => (prevPage === 0 ? 1 : 0));
+        }}
+      >
+        Change Page
+      </button>
 
       <div style={{ height: "1000px" }}></div>
     </div>
