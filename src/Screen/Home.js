@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 
+import HomeBox2 from "../Cart/HomeBox2";
+
 import box1Img1 from "../Img/delivery-man.jpeg";
 import box1Img2 from "../Img/delivery-man2.avif";
 import box1Img3 from "../Img/delivery-man3.jpeg";
@@ -10,9 +12,11 @@ import box1Img5 from "../Img/delivery-man5.jpeg";
 import Icon1 from "../Icon/online-shopping.png";
 import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
+import Icon4 from "../Icon/gps.png";
 
 import { Input, Button } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Link, useNavigate } from "react-router-dom";
 const { Search } = Input;
 
 export default function Home() {
@@ -31,7 +35,17 @@ export default function Home() {
   const handleButtonClick = (index) => {
     setActiveIndex(index);
   };
-  const onSearch = (value, _e, info) => console.log(info?.source, value);
+
+  const navigate = useNavigate();
+
+  const onSearch = (value, _e, info) => {
+    if (!value) {
+      alert("Please enter an Order ID");
+    } else {
+      // Navigate to with the provided Order ID
+      navigate(`/trackOrder?orderId=${value}`);
+    }
+  };
 
   // Box-2
   return (
@@ -78,13 +92,49 @@ export default function Home() {
           </div>
 
           <div className="homeBox1-right-div4">
-            <Button type="primary" icon={<ShoppingCartOutlined />} size="large">
-              Register Now
-            </Button>
+            <Link to="/register">
+              <Button
+                type="primary"
+                icon={<ShoppingCartOutlined />}
+                size="large"
+              >
+                Register Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
       {/* Box-2 */}
+      <div className="homeBox2">
+        <div className="homeBox2-div">
+        <HomeBox2 icon={Icon4} text1='Realtime Tracking' text2='International standard tracking via online'/>
+        <HomeBox2 icon={''} text1='Dedicated Relationship Team' text2='Team that takes care of your orders, day in day out'/>
+        <HomeBox2 icon={''} text1='Return OTP' text2='Full control of returns through return OTP'/>
+        <HomeBox2 icon={''} text1='Free In App Call' text2='Reach out to us for any queries for free with {name} GO App'/>
+        </div>
+        
+        <div className="homeBox2-div">
+        <HomeBox2 icon={''} text1='Cashless Pay' text2='Pay with Bkash, Nagad, Debit and Credit cards during doorstep delivery'/>
+        <HomeBox2 icon={''} text1='Smart log' text2='Detail visibility on return orders & correspondence between {name} and customers'/>
+        <HomeBox2 icon={''} text1='Automated billing' text2='Hassle free automated billing system'/>
+        <HomeBox2 icon={''} text1='Smart Check' text2='Access to customers’ previous delivery records to determine possible delivery or return'/>
+        </div>
+
+        <div className="homeBox2-div">
+         <HomeBox2 icon={''} text1='Strongest Doorstep Delivery' text2='Reaching out to the doorsteps of 4554 unions of Bangladesh'/>
+         <HomeBox2 icon={''} text1='Cash on Delivery Service' text2='Payment collection after successful delivery'/>
+         <HomeBox2 icon={''} text1='Merchant Payment within 1 Day' text2='Guaranteed merchant payment within 24 hours of the delivery'/>
+         <HomeBox2 icon={''} text1='Nationwide Doorstep Pick-up' text2='Doorstep pickup from anywhere around the country'/>
+        </div>
+
+        <div className="homeBox2-div">
+         <HomeBox2 icon={''} text1='Fastest Doorstep Delivery' text2='Next Day doorstep Delivery inside Dhaka. 24- 72 hours Delivery for rest of Bangladesh'/>
+         <HomeBox2 icon={''} text1='Dedicated Call Center' text2='A team of well trained professionals to listen and solve your queries'/>
+         <HomeBox2 icon={''} text1='Fulfillment and Warehousing' text2='Spacious warehousing and convenient fulfillment facilities'/>
+         <HomeBox2 icon={''} text1='Completely Own Setup' text2='a fleet of own vehicles and people'/>
+        </div>
+      </div>
+
       <div style={{ height: "1000px" }}></div>
     </div>
   );

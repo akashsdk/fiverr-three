@@ -10,6 +10,8 @@ import ServicesCustomer from './Screen/ServicesCustomer';
 import ServicesMerchant from './Screen/ServicesMerchant';
 import AboutUs from './Screen/AboutUs';
 import Contact from './Screen/Contact';
+import Register from './Components/Register';
+import TrackOrder from './Components/TrackOrder';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/services-merchant" element={<ServicesMerchant />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/trackOrder" element={<TrackOrder />} />
         </Routes>
         <Footer/>
         <FloatButton.BackTop visibilityHeight={0} />

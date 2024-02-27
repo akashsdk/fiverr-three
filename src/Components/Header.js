@@ -237,7 +237,7 @@ const HeaderCart = ({ textColors, handleTextClick, showDrawer }) => (
 
         {/* Box3 */}
         <div className="header-Box3">
-          <p>English or Bangla</p>
+          <p>English or France</p>
         </div>
       </div>
     </div>

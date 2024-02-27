@@ -1,0 +1,83 @@
+.HomeBox2-cart-Body{
+    height: 300px;
+    width: 22%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.HomeBox2-cart-Body:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.HomeBox2-cart-div{
+    margin-top: 30px;
+    height: 200px;
+    background-color: rgb(216, 251, 251);
+}
+.HomeBox2-cart-icon{
+    position: relative;
+    height: 80px;
+    margin-top: -60px;
+}
+
+.HomeBox2-cart-text1{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.HomeBox2-cart-text2{
+    font-size: 18px;
+    opacity: .7;
+    margin: 10px;
+}
+@media only screen and (max-width: 1000px) {
+    .HomeBox2-cart-Body{
+        height: auto;
+        width: 80%;
+    }
+    .HomeBox2-cart-div{
+        width: 95%;
+        height: 120px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .HomeBox2-cart-icon{
+        position: relative;
+        height: 80px;
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+    .HomeBox2-cart-text1{
+        font-size: 16px;
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    .HomeBox2-cart-text2{
+        font-size: 16px;
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .HomeBox2-cart-Body{
+        height: auto;
+        width: 100%;
+    }
+    .HomeBox2-cart-icon{
+        height: 60px;
+    }
+    .HomeBox2-cart-text1{
+        font-size: 16px;
+    }
+    
+    .HomeBox2-cart-text2{
+        font-size: 16px;
+    }
+}
