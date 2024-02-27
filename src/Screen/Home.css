@@ -129,6 +129,19 @@
   opacity: 1;
 }
 /* Box-3 */
+.homeBox3{
+  height: auto;
+  width: 100%;
+  margin-top: 50px;
+  background-color: rgb(238, 252, 252);
+}
+.homeBox3-div{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 @media only screen and (max-width: 1000px) {
   .homeBox1 {
@@ -150,6 +163,10 @@
     margin-top: 30px;
   }
   .homeBox2-div {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .homeBox3-div {
     justify-content: center;
     flex-direction: column;
   }

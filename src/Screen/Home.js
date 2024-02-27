@@ -13,6 +13,7 @@ import Icon1 from "../Icon/online-shopping.png";
 import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
 import Icon4 from "../Icon/gps.png";
+
 import Icon5 from "../Icon/icon2.png";
 import Icon6 from "../Icon/icon3.png";
 import Icon7 from "../Icon/icon4.png";
@@ -29,6 +30,13 @@ import Icon17 from "../Icon/icon14.png";
 import Icon18 from "../Icon/icon15.png";
 import Icon19 from "../Icon/icon16.png";
 
+import Icon20 from "../Icon/monitoring.png";
+import Icon21 from "../Icon/location.png";
+import Icon22 from "../Icon/time.png";
+import Icon23 from "../Icon/payment-method.png";
+import Icon24 from "../Icon/cash-money.png";
+import Icon25 from "../Icon/insurance.png";
+
 import { Input, Button } from "antd";
 import {
   ShoppingCartOutlined,
@@ -36,6 +44,7 @@ import {
   RightCircleOutlined,
 } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
+import HomeChooseCart from "../Cart/HomeChooseCart";
 const { Search } = Input;
 
 export default function Home() {
@@ -132,10 +141,17 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* Box-2 */}
       <div className="homeBox2">
         <p className="home-Text">Why Name</p>
-        <div style={{ display: "flex", alignItems: "center", marginBottom:'30px' }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "30px",
+          }}
+        >
           <div
             style={{
               flex: 1,
@@ -297,6 +313,77 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Box-Img */}
+      <div>
+        fff
+      </div>
+
+      {/* Box-3 */}
+      <div className="homeBox3">
+        <div style={{ height: "30px" }} />
+        <p className="home-Text">Choose name as your logistics partner</p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "30px",
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              backgroundColor: "#fff",
+              height: "3px",
+            }}
+          />
+
+          <p style={{ margin: "0 10px" }}>...</p>
+
+          <div
+            style={{
+              flex: 1,
+              backgroundColor: "#fff",
+              height: "3px",
+            }}
+          />
+        </div>
+
+        <div className="homeBox3-div">
+          <HomeChooseCart
+            icon={Icon20}
+            text1="Industry-leading tech"
+            text2="With a brilliant team of engineers driving everything we do, NAME offers the best possible service experience powered by superior technology"
+          />
+          <HomeChooseCart
+            icon={Icon21}
+            text1="Nationwide coverage"
+            text2="NAME offers the widest logistics network, covering 64 districts and 490+ sub districts across Bangladesh"
+          />
+          <HomeChooseCart
+            icon={Icon22}
+            text1="Fastest solutions"
+            text2="Backed by an agile team and dynamic operations, we promise to find the fastest solutions for your needs"
+          />
+        </div>
+
+        <div className="homeBox3-div">
+          <HomeChooseCart
+            icon={Icon23}
+            text1="Next day payment"
+            text2="Once the delivery is complete you will receive payment the very next day."
+          />
+          <HomeChooseCart
+            icon={Icon24}
+            text1="Best COD rates"
+            text2="COD charge inside Dhaka 0%, outside Dhaka 1%."
+          />
+          <HomeChooseCart
+            icon={Icon25}
+            text1="Secure handling"
+            text2="Compensation policy guarantees safety of your shipment"
+          />
+        </div>
+      </div>
       <div style={{ height: "1000px" }}></div>
     </div>
   );
