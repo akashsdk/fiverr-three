@@ -128,6 +128,14 @@
 .homeBox2-button-Icon:hover {
   opacity: 1;
 }
+/* Box-Img */
+.home-Img-Div{
+  width: 100%;
+}
+.home-Img{
+  height: auto;
+  width: 100%;
+}
 /* Box-3 */
 .homeBox3{
   height: auto;

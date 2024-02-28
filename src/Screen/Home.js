@@ -9,6 +9,10 @@ import box1Img3 from "../Img/delivery-man3.jpeg";
 import box1Img4 from "../Img/delivery-man4.webp";
 import box1Img5 from "../Img/delivery-man5.jpeg";
 
+import Img1 from "../Img/Screenshot 2024-02-28 at 5.57.26 AM.png";
+import Img2 from "../Img/Screenshot 2024-02-28 at 5.57.45 AM.png";
+import Img3 from "../Img/Screenshot 2024-02-28 at 5.58.06 AM.png";
+
 import Icon1 from "../Icon/online-shopping.png";
 import Icon2 from "../Icon/courier-service.png";
 import Icon3 from "../Icon/delivery-courier.png";
@@ -42,7 +46,10 @@ import {
   ShoppingCartOutlined,
   LeftCircleOutlined,
   RightCircleOutlined,
+  RightOutlined,
+  LeftOutlined,
 } from "@ant-design/icons";
+
 import { Link, useNavigate } from "react-router-dom";
 import HomeChooseCart from "../Cart/HomeChooseCart";
 const { Search } = Input;
@@ -74,7 +81,28 @@ export default function Home() {
       navigate(`/trackOrder?orderId=${value}`);
     }
   };
+  // Box-Img
+  const images2 = [Img1, Img2, Img3];
 
+  const [currentImage2, setCurrentImage] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % images2.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prevIndex) =>
+      prevIndex === 0 ? images2.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [currentImage2]);
   // Box-2
   const [page, setPage] = useState(0);
 
@@ -314,8 +342,23 @@ export default function Home() {
       </div>
 
       {/* Box-Img */}
-      <div>
-        fff
+      <div className="home-Img-Div">
+        <div className="image-slider">
+          <img
+            className="home-Img"
+            src={images2[currentImage2]}
+            alt={`Slide ${currentImage2 + 1}`}
+          />
+
+          <div className="">
+            <button onClick={prevImage}>
+              <LeftOutlined />
+            </button>
+            <button onClick={nextImage}>
+              <RightOutlined />
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Box-3 */}
