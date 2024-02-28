@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 
 import HomeBox2 from "../Cart/HomeBox2";
+import Charges from './Charges';
 
 import box1Img1 from "../Img/delivery-man.jpeg";
 import box1Img2 from "../Img/delivery-man2.avif";
@@ -343,21 +344,19 @@ export default function Home() {
 
       {/* Box-Img */}
       <div className="home-Img-Div">
-        <div className="image-slider">
-          <img
-            className="home-Img"
-            src={images2[currentImage2]}
-            alt={`Slide ${currentImage2 + 1}`}
-          />
+        <img
+          className="home-Img"
+          src={images2[currentImage2]}
+          alt={`Slide ${currentImage2 + 1}`}
+        />
 
-          <div className="">
-            <button onClick={prevImage}>
-              <LeftOutlined />
-            </button>
-            <button onClick={nextImage}>
-              <RightOutlined />
-            </button>
-          </div>
+        <div className="home-Img-Div2">
+          <button onClick={prevImage} className="homeBox2-button">
+            <LeftOutlined className="homeBox2-button-Icon" />
+          </button>
+          <button onClick={nextImage} className="homeBox2-button">
+            <RightOutlined className="homeBox2-button-Icon" />
+          </button>
         </div>
       </div>
 
@@ -426,6 +425,11 @@ export default function Home() {
             text2="Compensation policy guarantees safety of your shipment"
           />
         </div>
+      </div>
+
+      {/* Box-4 */}
+      <div className="homeBox4">
+        <Charges/>      
       </div>
       <div style={{ height: "1000px" }}></div>
     </div>

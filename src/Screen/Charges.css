@@ -1,0 +1,57 @@
+.Charges-Body {
+  height: auto;
+  width: 100%;
+}
+.Charges-Text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin: 0 10px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.Charges-Box{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Charges-Text2{
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(1, 142, 95);
+}
+.Charges-Left{
+    width: 50%;
+}
+.Charges-Right{
+    width: 50%;
+}
+
+.Charges-Div{
+    height: 40px;
+    background-color: rgb(216, 251, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Charges-Text3{
+    opacity: .6;
+    text-align: left;
+    margin-left: 10px;
+}
+@media only screen and (max-width: 1000px) {
+    .Charges-Box{
+        flex-direction: column;
+    }
+    .Charges-Text2{
+        font-size: 20px;
+    }
+    .Charges-Left{
+        width: 100%;
+    }
+    .Charges-Right{
+        width: 100%;
+    }
+}
