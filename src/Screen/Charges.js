@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Charges.css";
 
-import { Space, Table, Tag } from "antd";
+import { Table, Form, InputNumber, Button, Select } from "antd";
 const columns = [
   {
     title: "Package Weight",
@@ -42,7 +42,40 @@ const data = [
   },
 ];
 
+const { Option } = Select;
+
+const divisions = [
+  "Dhaka",
+  "Chittagong",
+  "Rajshahi",
+  "Khulna",
+  "Barisal",
+  "Sylhet",
+  "Rangpur",
+  "Mymensingh",
+];
+
+const districts = {
+  Dhaka: ["Dhaka", "Gazipur", "Narayanganj"],
+  Chittagong: ["Chittagong", "Cox's Bazar", "Comilla"],
+  Rajshahi: ["Rajshahi"],
+  // Add districts for other divisions
+};
+
 export default function Charges() {
+  const [selectedDivision, setSelectedDivision] = useState("");
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+
+  const handleDivisionChange = (value) => {
+    setSelectedDivision(value);
+    setSelectedDistrict(""); // Reset district when division changes
+  };
+
+  const handleDistrictChange = (value) => {
+    setSelectedDistrict(value);
+  };
+
+
   return (
     <div className="Charges-Body">
       <p className="Charges-Text">Delivery Charges</p>
@@ -77,8 +110,47 @@ export default function Charges() {
 
         <div className="Charges-Right">
           <p className="Charges-Text2">Exchange & Partial Delivery Service</p>
-          <div>
-            ggg
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <InputNumber
+              placeholder="Weight ( Upto 10kg )"
+              style={{
+                width: "50%",
+                marginTop: "10px",
+              }}
+            />
+            <InputNumber
+              placeholder="Selling price of the product"
+              style={{
+                width: "50%",
+                marginTop: "10px",
+              }}
+            />
+            <Select
+              style={{ width: "50%", marginTop: "10px" }}
+              placeholder="Select Division"
+              onChange={handleDivisionChange}
+            >
+              {divisions.map((division) => (
+                <Option key={division} value={division}>
+                  {division}
+                </Option>
+              ))}
+            </Select>
+
+            {selectedDivision && (
+              <Select
+                style={{ width: "50%", marginTop: "10px" }}
+                placeholder="Select District"
+                onChange={handleDistrictChange}
+              >
+                {districts[selectedDivision].map((district) => (
+                  <Option key={district} value={district}>
+                    {district}
+                  </Option>
+                ))}
+              </Select>
+            )}
+            <Button type="primary" style={{ width: "50%", marginTop: "10px" }}>Calculate price</Button>
           </div>
         </div>
       </div>
