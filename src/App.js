@@ -12,6 +12,7 @@ import AboutUs from './Screen/AboutUs';
 import Contact from './Screen/Contact';
 import Register from './Components/Register';
 import TrackOrder from './Components/TrackOrder';
+import AnsQue from './Components/ AnsQue';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/trackOrder" element={<TrackOrder />} />
+          <Route path="/faq" element={<AnsQue />} />
         </Routes>
         <Footer/>
         <FloatButton.BackTop visibilityHeight={0} />

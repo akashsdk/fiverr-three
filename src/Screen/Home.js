@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 
 import HomeBox2 from "../Cart/HomeBox2";
-import Charges from './Charges';
+import Charges from "./Charges";
+import AnsQue from "../Components/ AnsQue";
 
 import box1Img1 from "../Img/delivery-man.jpeg";
 import box1Img2 from "../Img/delivery-man2.avif";
@@ -49,6 +50,7 @@ import {
   RightCircleOutlined,
   RightOutlined,
   LeftOutlined,
+  ArrowRightOutlined,
 } from "@ant-design/icons";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -429,8 +431,15 @@ export default function Home() {
 
       {/* Box-4 */}
       <div className="homeBox4">
-        <Charges/>      
+        <Charges />
+        <AnsQue />
+
+        <Link to="/faq" className="homeBox4-Link">
+          <p className="homeBox4-Text">See all our FAQs</p>
+          <ArrowRightOutlined className="homeBox4-Icon" />
+        </Link>
       </div>
+
       <div style={{ height: "1000px" }}></div>
     </div>
   );

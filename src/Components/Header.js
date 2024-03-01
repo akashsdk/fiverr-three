@@ -115,7 +115,7 @@ export default function Header() {
     ),
   ];
   return (
-    <div style={{ height: "auto", width: "100%" }}>
+    <div style={{ height: "auto", width: "100%", }}>
       <HeaderCart
         textColors={textColors}
         handleTextClick={handleTextClick}
@@ -168,7 +168,7 @@ export default function Header() {
 }
 
 const HeaderCart = ({ textColors, handleTextClick, showDrawer }) => (
-  <div style={{ height: "auto", width: "100%" }}>
+  <div style={{ height: "auto", width: "100%",}}>
     <div className="header-desktop-vew">
       <div className="header-Body">
         {/* Box1 */}

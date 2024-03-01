@@ -1,0 +1,80 @@
+.AnsQue-Body {
+  height: auto;
+  width: 100%;
+}
+.AnsQue-Text {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 10px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.AnsQue-Text2{
+    opacity: .6;
+    margin-top: -15px;
+}
+.AnsQue-Box{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AnsQue-Box2{
+    width: 60%;
+}
+.AnsQue-Div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.AnsQue-Line{
+    height: 1.5px;
+    width: 100%;
+    background-color: rgb(1, 142, 95);
+    opacity: .6;
+}
+.AnsQue-Text3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 30px;
+    text-align: left;
+}
+.AnsQue-Text4{
+    text-align: left;
+}
+.AnsQue-Button{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.AnsQue-Button:hover .AnsQue-Icon{
+    color: #f24444;
+}
+.AnsQue-Icon{
+    font-size: 28px;
+    color: rgb(1, 142, 95);
+}
+@media only screen and (max-width: 1000px) {
+    .AnsQue-Box2{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .AnsQue-Box2{
+        width: 95%;
+    }
+    .AnsQue-Text{
+        font-size: 18px;
+    }
+    .AnsQue-Text3{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .AnsQue-Icon{
+        font-size: 20px;
+    }
+}
