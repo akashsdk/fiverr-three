@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Charges.css";
 
-import { Table, Form, InputNumber, Button, Select } from "antd";
+import { Table,   Button, Select } from "antd";
 const columns = [
   {
     title: "Package Weight",
