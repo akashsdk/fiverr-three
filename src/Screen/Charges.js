@@ -75,7 +75,6 @@ export default function Charges() {
     setSelectedDistrict(value);
   };
 
-
   return (
     <div className="Charges-Body">
       <p className="Charges-Text">Delivery Charges</p>
@@ -110,21 +109,24 @@ export default function Charges() {
 
         <div className="Charges-Right">
           <p className="Charges-Text2">Exchange & Partial Delivery Service</p>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <InputNumber
-              placeholder="Weight ( Upto 10kg )"
-              style={{
-                width: "50%",
-                marginTop: "10px",
-              }}
-            />
-            <InputNumber
-              placeholder="Selling price of the product"
-              style={{
-                width: "50%",
-                marginTop: "10px",
-              }}
-            />
+          <div className="Charges-Right-Div">
+            <div className="Charges-Right-Div2">
+              <div className="Charges-Right-InputDiv">
+                <p className="Charges-Right-InputText">Weight ( Upto 10kg )</p>
+                <input placeholder="Weight" className="Charges-Right-Input" />
+              </div>
+
+              <div className="Charges-Right-InputDiv">
+                <p className="Charges-Right-InputText">
+                  Selling price of the product
+                </p>
+                <input
+                type="number"
+                  placeholder="Price"
+                  className="Charges-Right-Input"
+                />
+              </div>
+            </div>
             <Select
               style={{ width: "50%", marginTop: "10px" }}
               placeholder="Select Division"
@@ -150,7 +152,7 @@ export default function Charges() {
                 ))}
               </Select>
             )}
-            <Button type="primary" style={{ width: "50%", marginTop: "10px" }}>Calculate price</Button>
+            <Button type="primary">Calculate price</Button>
           </div>
         </div>
       </div>
