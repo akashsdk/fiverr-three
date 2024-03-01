@@ -75,6 +75,15 @@ export default function Charges() {
     setSelectedDistrict(value);
   };
 
+  const [number, setNumber] = useState(0);
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+
+    if (value <= 10) {
+      setNumber(value);
+    }
+  };
   return (
     <div className="Charges-Body">
       <p className="Charges-Text">Delivery Charges</p>
@@ -113,7 +122,13 @@ export default function Charges() {
             <div className="Charges-Right-Div2">
               <div className="Charges-Right-InputDiv">
                 <p className="Charges-Right-InputText">Weight ( Upto 10kg )</p>
-                <input placeholder="Weight" className="Charges-Right-Input" />
+                <input
+                  type="number"
+                  placeholder="Weight (KG)"
+                  className="Charges-Right-Input"
+                  value={number}
+                  onChange={handleChange}
+                />
               </div>
 
               <div className="Charges-Right-InputDiv">
@@ -121,37 +136,43 @@ export default function Charges() {
                   Selling price of the product
                 </p>
                 <input
-                type="number"
+                  type="number"
                   placeholder="Price"
                   className="Charges-Right-Input"
                 />
               </div>
             </div>
-            <Select
-              style={{ width: "50%", marginTop: "10px" }}
-              placeholder="Select Division"
-              onChange={handleDivisionChange}
-            >
-              {divisions.map((division) => (
-                <Option key={division} value={division}>
-                  {division}
-                </Option>
-              ))}
-            </Select>
-
-            {selectedDivision && (
+            <p className="Charges-Right-Text">Pickup Area</p>
+            <div className="Charges-Right-SelectDiv">
               <Select
-                style={{ width: "50%", marginTop: "10px" }}
-                placeholder="Select District"
-                onChange={handleDistrictChange}
+                size="large"
+                className="Charges-Right-Select"
+                placeholder="Select Division"
+                onChange={handleDivisionChange}
+                optionFontSize="20px"
               >
-                {districts[selectedDivision].map((district) => (
-                  <Option key={district} value={district}>
-                    {district}
+                {divisions.map((division) => (
+                  <Option key={division} value={division}>
+                    {division}
                   </Option>
                 ))}
               </Select>
-            )}
+
+              {selectedDivision && (
+                <Select
+                  size="large"
+                  className="Charges-Right-Select2"
+                  placeholder="Select District"
+                  onChange={handleDistrictChange}
+                >
+                  {districts[selectedDivision].map((district) => (
+                    <Option key={district} value={district}>
+                      {district}
+                    </Option>
+                  ))}
+                </Select>
+              )}
+            </div>
             <Button type="primary">Calculate price</Button>
           </div>
         </div>

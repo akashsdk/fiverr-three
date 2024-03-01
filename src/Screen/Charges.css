@@ -74,6 +74,28 @@
     width: 80%;
     padding: 10px;
 }
+.Charges-Right-Text{
+    font-size: 18px;
+    margin-bottom: 5px;
+    opacity: .7;
+    margin-top: 30px;
+}
+.Charges-Right-SelectDiv{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    margin-bottom: 30px;
+    margin-left: 5%;
+}
+.Charges-Right-Select{
+    width: 45%;
+}
+.Charges-Right-Select2{
+    width: 45%;
+    margin-left: 5%;
+}
 @media only screen and (max-width: 1000px) {
     .Charges-Box{
         flex-direction: column;
@@ -86,5 +108,24 @@
     }
     .Charges-Right{
         width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Charges-Right-Div2{
+        flex-direction: column;
+    }
+    .Charges-Right-SelectDiv{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Charges-Right-Select{
+        width: 76.5%;
+        margin-left: 5%;
+
+    }
+    .Charges-Right-Select2{
+        width: 76.5%;
+        margin-top: 30px;
     }
 }
